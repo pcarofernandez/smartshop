@@ -1,0 +1,33 @@
+<ion-header>
+  <ss-header title="Smartshop"></ss-header>
+</ion-header>
+
+<ion-content padding>
+  <form #f="ngForm" [formGroup]="formGroup" (ngSubmit)="access(formGroup.value)">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-10>
+          <ion-item>
+            <ion-label floating>Usuario</ion-label>
+            <ion-input formControlName="username"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-10>
+          <ion-item>
+            <ion-label floating>Contraseña</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col>
+          <button [disabled]="!f.valid" type="submit" ion-button margin>Acceder</button>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

@@ -1,14 +1,29 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+  <ss-header title="Smartshop"></ss-header>
 </ion-header>
-
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <button ion-button icon-left col-12 margin-bottom>
+          <ion-icon name="paper"></ion-icon>
+          Lista de compras
+        </button>
+        <button ion-button icon-left col-12 margin-bottom>
+          <ion-icon name="clipboard"></ion-icon>
+          Administrar listas
+        </button>
+        <button ion-button icon-left col-12 margin-bottom>
+          <ion-icon name="cart"></ion-icon>
+          Administrar <br>supermercados
+        </button>
+        <button ion-button icon-left col-12 margin-bottom>
+          <ion-icon name="basket"></ion-icon>
+          Administrar <br>productos
+        </button>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
