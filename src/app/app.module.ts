@@ -12,8 +12,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { MarketListPage } from '../pages/market-list/market-list';
 
-import { AuthenticationService, UtilsService } from '../services/index';
+import { AuthenticationService, UtilsService, MarketService } from '../services/index';
 
 import { FIREBASE_CONFIG } from '../config/firebase.config';
 
@@ -21,7 +22,8 @@ import { FIREBASE_CONFIG } from '../config/firebase.config';
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    MarketListPage
   ],
   imports: [
     BrowserModule,
@@ -36,14 +38,16 @@ import { FIREBASE_CONFIG } from '../config/firebase.config';
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    MarketListPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthenticationService,
-    UtilsService
+    UtilsService,
+    MarketService
   ]
 })
 export class AppModule {}

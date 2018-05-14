@@ -25,7 +25,6 @@ export class AuthenticationService {
         }).catch( error => {
           return Observable.throw( messages[error.code] );
         });
-    // return Observable.empty();
   }
 
   logout() {
@@ -37,7 +36,6 @@ export class AuthenticationService {
     }).catch( error => {
       return Observable.throw( messages[error.code] );
     });
-    // return Observable.empty();
   }
 
   saveToken( token ) {
@@ -50,7 +48,8 @@ export class AuthenticationService {
 
   isAuthenticated() : boolean {
     let res = false;
-    if (localStorage.getItem(AuthenticationService.TOKEN)) {
+    if (localStorage.getItem(AuthenticationService.TOKEN)
+        && this.fAuth.authState !== null) {
       res = true;
     }
 
